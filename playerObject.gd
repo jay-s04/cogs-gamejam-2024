@@ -3,7 +3,10 @@ extends CharacterBody2D
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
+@onready var currAnim = get_node("AnimatedSprite2D")
 
+func _ready():
+	currAnim.play("idle")
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
